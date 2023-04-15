@@ -11,7 +11,7 @@ const MultipleLinearRegression = () => {
   const seasons = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2];
   const sales = [
     50000,
-    60000,
+    60000, 
     70000,
     80000,
     90000,

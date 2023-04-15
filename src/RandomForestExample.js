@@ -1,4 +1,5 @@
-const { RandomForestRegression } = require("ml-random-forest");
+import React from "react";
+import { RandomForestRegression } from "ml-random-forest";
 
 const RandomForestExample = () => {
   const categories = [1, 2, 3, 1, 2, 3, 1, 2, 3, 1];
@@ -10,16 +11,7 @@ const RandomForestExample = () => {
   const offers = [80, 100, 120, 140, 160, 180, 200, 220, 240, 260];
   const seasons = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2];
   const sales = [
-    50000,
-    60000,
-    70000,
-    80000,
-    90000,
-    100000,
-    110000,
-    120000,
-    130000,
-    140000
+    50000, 60000, 70000, 80000, 90000, 100000, 110000, 120000, 130000, 140000,
   ];
 
   // Combine the features into a single array of arrays
@@ -31,13 +23,13 @@ const RandomForestExample = () => {
     categories[index],
     subcategories[index],
     kilosFlag[index],
-    products[index]
+    products[index],
   ]);
 
   const rf = new RandomForestRegression({
     nEstimators: 10,
     maxFeatures: 8,
-    seed: 42
+    seed: 42,
   });
 
   rf.train(features, sales);
